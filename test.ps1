@@ -1,5 +1,6 @@
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
+[System.Windows.Forms.Application]::EnableVisualStyles()
 
 .".\DrawingPointCalculator.ps1"
 
@@ -106,5 +107,5 @@ $form.Controls.Add($label1)
 $dpc.addObjV($label1.Width, $label1.Height)   # add objects vertically
 
 # show
-$form.Add_Shown({$form.Activate()})
+# $form.Add_Shown({$form.Activate()})
 $form.ShowDialog()
