@@ -52,6 +52,7 @@ class DrawingPointCalculator{
 
     [void] newLine(){
         $this.x = $this.marginX
+        $this.reservedX = $this.marginX
         $this.y = $this.reservedY
     } 
 
@@ -66,6 +67,7 @@ class DrawingPointCalculator{
         }
         $this.x = $this.reservedX
         $this.y = $this.wrapperY[$len - 1]
+        $this.reservedY = $this.y
         $this.wrapperY[0..($len - 2)]
     }
 }
